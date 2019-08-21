@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ExpDBModelStoreContainer" CdmEntityContainer="ExpDBEntities">
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="ExpDBModel.Products">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="p_id" ColumnName="p_id" />
+          <ScalarProperty Name="p_name" ColumnName="p_name" />
+          <ScalarProperty Name="p_cate" ColumnName="p_cate" />
+          <ScalarProperty Name="p_prize" ColumnName="p_prize" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

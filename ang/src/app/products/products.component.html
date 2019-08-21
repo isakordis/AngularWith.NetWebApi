@@ -1,0 +1,76 @@
+<div class="row">
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content white-text">
+                <div class="row">
+                    <div class="col s5">
+                        <!-- <form #usersForm="ngForm" (ngSubmit)="onSubmit(usersForm)"> -->
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input type="text" name="name" [(ngModel)]="products.p_name" placeholder="ProductName">
+                                <label>Name :
+                                    <label class="red-text"></label>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input type="text" name="cate" [(ngModel)]="products.p_cate" placeholder="Category">
+                                <label>Category :</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input type="text" name="prize" [(ngModel)]="products.p_prize" placeholder="18">
+                                <label>Price :</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+
+                                <button class="btn btn-custom right" id="saved" (click)="SaveForm(products)"
+                                    type="submit" style="background-color: white">Kaydet</button>
+                                <button type="hidden" class="btn btn-custom right" type="button"
+                                    (click)="Update(products)">
+                                    Guncelle
+                                </button>
+
+                            </div>
+                        </div>
+                        <!-- </form> -->
+                    </div>
+                    <div class="col s7">
+                        <table class="responsive-table highlight">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Category</th>
+                                    <th>Price</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tr *ngFor="let product of product">
+                                <td>{{product.p_id}}</td>
+                                <td>{{product.p_name}}</td>
+                                <td>{{product.p_cate}}</td>
+                                <td>{{product.prize}}</td>
+                                <td>
+                                    <a class="action-btn" (click)="Edit(product)">
+                                        <i class="material-icons">edit</i>
+                                    </a>
+                                    <a class="action-btn" (click)="Delete(product.p_id)">
+                                        <i class="material-icons">delete</i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
